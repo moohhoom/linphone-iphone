@@ -24,54 +24,101 @@
 
 @implementation LinphoneLogger
 
+#define FILE_SIZE 17
+#define DOMAIN_SIZE 3
+
+#define ASL_LEVEL_EMERG   0
+#define ASL_LEVEL_ALERT   1
+#define ASL_LEVEL_CRIT    2
+#define ASL_LEVEL_ERR     3
+#define ASL_LEVEL_WARNING 4
+#define ASL_LEVEL_NOTICE  5
+#define ASL_LEVEL_INFO    6
+#define ASL_LEVEL_DEBUG   7
+
++ (NSString *)cacheDirectory {
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+	NSString *cachePath = [paths objectAtIndex:0];
+	BOOL isDir = NO;
+	NSError *error;
+	// cache directory must be created if not existing
+	if (![[NSFileManager defaultManager] fileExistsAtPath:cachePath isDirectory:&isDir] && isDir == NO) {
+		if (![[NSFileManager defaultManager] createDirectoryAtPath:cachePath
+									   withIntermediateDirectories:NO
+														attributes:nil
+															 error:&error]) {
+			LOGE(@"Could not create cache directory: %@", error);
+		}
+	}
+	return cachePath;
+}
+
 + (void)log:(OrtpLogLevel)severity file:(const char *)file line:(int)line format:(NSString *)format, ... {
 	va_list args;
 	va_start(args, format);
 	NSString *str = [[NSString alloc] initWithFormat:format arguments:args];
 	const char *utf8str = [str cStringUsingEncoding:NSString.defaultCStringEncoding];
-	int filesize = 20;
 	const char *filename = strchr(file, '/') ? strrchr(file, '/') + 1 : file;
-	if (severity <= ORTP_DEBUG) {
-		// lol: ortp_debug(XXX) can be disabled at compile time, but ortp_log(ORTP_DEBUG, xxx) will always be valid even
-		//      not in debug build...
-		ortp_debug("%*s:%3d - %s", filesize, filename + MAX((int)strlen(filename) - filesize, 0), line, utf8str);
-	} else {
-		ortp_log(severity, "%*s:%3d - %s", filesize, filename + MAX((int)strlen(filename) - filesize, 0), line,
-				 utf8str);
-	}
+	ortp_log(severity, "(%*s:%-4d) %s", FILE_SIZE, filename + MAX((int)strlen(filename) - FILE_SIZE, 0), line, utf8str);
 	va_end(args);
+}
+
+
++ (void)enableLogs:(OrtpLogLevel)level {
+	BOOL enabled = (level >= ORTP_DEBUG && level < ORTP_ERROR);
+	static BOOL stderrInUse = NO;
+	if (!stderrInUse) {
+		asl_add_log_file(NULL, STDERR_FILENO);
+		stderrInUse = YES;
+	}
+	linphone_core_set_log_collection_path([self cacheDirectory].UTF8String);
+	linphone_core_enable_logs_with_cb(linphone_iphone_log_handler);
+	linphone_core_enable_log_collection(enabled);
+	if (level == 0) {
+		linphone_core_set_log_level(ORTP_FATAL);
+		ortp_set_log_level("ios", ORTP_FATAL);
+		NSLog(@"I/%s/Disabling all logs", ORTP_LOG_DOMAIN);
+	} else {
+		NSLog(@"I/%s/Enabling %s logs", ORTP_LOG_DOMAIN, (enabled ? "all" : "application only"));
+		linphone_core_set_log_level(level);
+		ortp_set_log_level("ios", level == ORTP_DEBUG ? ORTP_DEBUG : ORTP_MESSAGE);
+	}
 }
 
 #pragma mark - Logs Functions callbacks
 
-void linphone_iphone_log_handler(int lev, const char *fmt, va_list args) {
+void linphone_iphone_log_handler(const char *domain, OrtpLogLevel lev, const char *fmt, va_list args) {
 	NSString *format = [[NSString alloc] initWithUTF8String:fmt];
 	NSString *formatedString = [[NSString alloc] initWithFormat:format arguments:args];
-	char levelC = 'I';
-	switch ((OrtpLogLevel)lev) {
-	case ORTP_FATAL:
-		levelC = 'F';
-		break;
-	case ORTP_ERROR:
-		levelC = 'E';
-		break;
-	case ORTP_WARNING:
-		levelC = 'W';
-		break;
-	case ORTP_MESSAGE:
-		levelC = 'I';
-		break;
-	case ORTP_TRACE:
-	case ORTP_DEBUG:
-		levelC = 'D';
-		break;
-	case ORTP_LOGLEV_END:
-		return;
+	int lvl = ASL_LEVEL_NOTICE;
+	switch (lev) {
+		case ORTP_FATAL:
+			lvl = ASL_LEVEL_CRIT;
+			break;
+		case ORTP_ERROR:
+			lvl = ASL_LEVEL_ERR;
+			break;
+		case ORTP_WARNING:
+			lvl = ASL_LEVEL_WARNING;
+			break;
+		case ORTP_MESSAGE:
+			lvl = ASL_LEVEL_NOTICE;
+			break;
+		case ORTP_DEBUG:
+		case ORTP_TRACE:
+			lvl = ASL_LEVEL_INFO;
+			break;
+		case ORTP_LOGLEV_END:
+			return;
 	}
-	// since \r are interpreted like \n, avoid double new lines when logging packets
-	NSLog(@"%c %@", levelC, [formatedString stringByReplacingOccurrencesOfString:@"\r\n" withString:@"\n"]);
+	if (!domain)
+		domain = "lib";
+	// since \r are interpreted like \n, avoid double new lines when logging network packets (belle-sip)
+	// output format is like: I/ios/some logs. We truncate domain to **exactly** DOMAIN_SIZE characters to have
+	// fixed-length aligned logs
+	asl_log(NULL, NULL, lvl, "%*.*s/%s", DOMAIN_SIZE, DOMAIN_SIZE, domain,
+			[formatedString stringByReplacingOccurrencesOfString:@"\r\n" withString:@"\n"].UTF8String);
 }
-
 @end
 
 @implementation LinphoneUtils
