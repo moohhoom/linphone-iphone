@@ -67,11 +67,11 @@
 + (void)enableLogs:(OrtpLogLevel)level {
 	BOOL enabled = (level >= ORTP_DEBUG && level < ORTP_ERROR);
 	static BOOL stderrInUse = NO;
-	if (!stderrInUse) {
+/*	if (!stderrInUse) {
 		asl_add_log_file(NULL, STDERR_FILENO);
 		stderrInUse = YES;
 	}
-	linphone_core_set_log_collection_path([self cacheDirectory].UTF8String);
+*/	linphone_core_set_log_collection_path([self cacheDirectory].UTF8String);
 	linphone_core_enable_logs_with_cb(linphone_iphone_log_handler);
 	linphone_core_enable_log_collection(enabled);
 	if (level == 0) {
@@ -116,8 +116,8 @@ void linphone_iphone_log_handler(const char *domain, OrtpLogLevel lev, const cha
 	// since \r are interpreted like \n, avoid double new lines when logging network packets (belle-sip)
 	// output format is like: I/ios/some logs. We truncate domain to **exactly** DOMAIN_SIZE characters to have
 	// fixed-length aligned logs
-	asl_log(NULL, NULL, lvl, "%*.*s/%s", DOMAIN_SIZE, DOMAIN_SIZE, domain,
-			[formatedString stringByReplacingOccurrencesOfString:@"\r\n" withString:@"\n"].UTF8String);
+//	asl_log(NULL, NULL, lvl, "%*.*s/%s", DOMAIN_SIZE, DOMAIN_SIZE, domain,
+//			[formatedString stringByReplacingOccurrencesOfString:@"\r\n" withString:@"\n"].UTF8String);
 }
 @end
 
