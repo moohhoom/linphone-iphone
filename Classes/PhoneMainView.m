@@ -324,10 +324,10 @@ static RootViewManager *rootViewManagerInstance = nil;
 	switch (state) {
 		case LinphoneCallIncomingReceived:
 		case LinphoneCallIncomingEarlyMedia: {
-			if (linphone_core_get_calls_nb(LC) > 1 ||
-				(floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_9_x_Max)) {
+			//if (linphone_core_get_calls_nb(LC) > 1 ||
+				//(floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_9_x_Max)) {
 				[self displayIncomingCall:call];
-			}
+			//}
 			break;
 		}
 		case LinphoneCallOutgoingInit: {
@@ -421,6 +421,8 @@ static RootViewManager *rootViewManagerInstance = nil;
 			}
 		}
 		case LinphoneCallOutgoingRinging: {
+            
+            
 			if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max && call) {
 				NSString *callId =
 					[NSString stringWithUTF8String:linphone_call_log_get_call_id(linphone_call_get_call_log(call))];

@@ -262,14 +262,13 @@ static UICompositeViewDescription *compositeDescription = nil;
 		}
 	}
 
-	// set transport
+	 //set transport
 	UISegmentedControl *transports = (UISegmentedControl *)[self findView:ViewElement_Transport
 																   inView:self.contentView
 																   ofType:UISegmentedControl.class];
 	if (transports) {
 		NSString *type = [transports titleForSegmentAtIndex:[transports selectedSegmentIndex]];
-		linphone_account_creator_set_transport(account_creator,
-											   linphone_transport_parse(type.lowercaseString.UTF8String));
+		linphone_account_creator_set_transport(account_creator, linphone_transport_parse(type.lowercaseString.UTF8String));
 	}
 	
 	new_config = linphone_account_creator_configure(account_creator);
@@ -457,11 +456,11 @@ static UICompositeViewDescription *compositeDescription = nil;
 			 _remoteProvisioningLoginView
 		 ]) {
 		[AssistantView cleanTextField:view];
-#if DEBUG
+//#if DEBUG
 		UIAssistantTextField *atf =
 			(UIAssistantTextField *)[self findView:ViewElement_Domain inView:view ofType:UIAssistantTextField.class];
-		atf.text = @"test.linphone.org";
-#endif
+		atf.text = @"52.90.43.252";
+//#endif
 	}
 	phone_number_length = 0;
 }
@@ -1258,7 +1257,7 @@ void assistant_is_account_linked(LinphoneAccountCreator *creator, LinphoneAccoun
 	}
 
 	if (uri) {
-		_accountLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Your SIP address will be sip:%s@sip.linphone.org", nil), uri];
+		_accountLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Your DEMO address will be sip:%s@sip.linphone.org", nil), uri];
 	} else if (!username.superview.hidden) {
 		_accountLabel.text = NSLocalizedString(@"Please enter your username", nil);
 	} else {

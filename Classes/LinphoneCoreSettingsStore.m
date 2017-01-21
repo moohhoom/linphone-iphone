@@ -699,7 +699,7 @@
 
 			LinphoneVideoPolicy policy;
 			policy.automatically_initiate = [self boolForKey:@"start_video_preference"];
-			policy.automatically_accept = [self boolForKey:@"accept_video_preference"];
+			policy.automatically_accept = true;
 			linphone_core_set_video_policy(LC, &policy);
 			linphone_core_enable_self_view(LC, [self boolForKey:@"self_video_preference"]);
 			BOOL preview_preference = IPAD && [self boolForKey:@"preview_preference"];

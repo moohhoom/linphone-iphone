@@ -1902,8 +1902,8 @@ void popup_link_account_cb(LinphoneAccountCreator *creator, LinphoneAccountCreat
 				[LinphoneManager.instance lpConfigStringForKey:@"xmlrpc_url" inSection:@"assistant" withDefault:@""]
 					.UTF8String);
 			linphone_account_creator_set_user_data(account_creator, (__bridge void *)(self));
-			linphone_account_creator_cbs_set_is_account_used(linphone_account_creator_get_callbacks(account_creator),
-															 popup_link_account_cb);
+			//linphone_account_creator_cbs_set_is_account_used(linphone_account_creator_get_callbacks(account_creator),
+			//												 popup_link_account_cb);
 			linphone_account_creator_set_username(account_creator, username);
 			linphone_account_creator_is_account_used(account_creator);
 		}

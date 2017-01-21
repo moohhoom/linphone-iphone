@@ -45,7 +45,6 @@
 		344ABDF214850AE9007420B6 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 344ABDF014850AE9007420B6 /* libstdc++.6.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		570742581D5A0691004B9C84 /* ShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 570742561D5A0691004B9C84 /* ShopView.xib */; };
 		570742611D5A09B8004B9C84 /* ShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5707425F1D5A09B8004B9C84 /* ShopView.m */; };
-		570742671D5A63DB004B9C84 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570742661D5A63DB004B9C84 /* StoreKit.framework */; };
 		630589E71B4E810900EFAE36 /* ChatTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 630589DF1B4E810900EFAE36 /* ChatTester.m */; };
 		630589E81B4E810900EFAE36 /* ContactsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 630589E11B4E810900EFAE36 /* ContactsTester.m */; };
 		630589EA1B4E810900EFAE36 /* LinphoneTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 630589E41B4E810900EFAE36 /* LinphoneTestCase.m */; };
@@ -674,10 +673,10 @@
 		8C2595E11DEDDC67007A6424 /* callkit_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2595E01DEDDC67007A6424 /* callkit_logo.png */; };
 		8C73477C1D9BA3A00022EE8C /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C73477B1D9BA3A00022EE8C /* UserNotifications.framework */; };
 		8CA2004C1D8158440095F859 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA2004B1D8158440095F859 /* PushKit.framework */; };
-		9EC6C1E11DF96991006C2FD2 /* armv7-apple-darwin.ios in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC6C1E01DF96991006C2FD2 /* armv7-apple-darwin.ios */; };
 		9EC6C1E31DF969AA006C2FD2 /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC6C1E21DF969AA006C2FD2 /* libturbojpeg.a */; };
 		9EC6C1E41DF969D1006C2FD2 /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC6C1E21DF969AA006C2FD2 /* libturbojpeg.a */; };
 		C90FAA7915AF54E6002091CB /* HistoryDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C90FAA7715AF54E6002091CB /* HistoryDetailsView.m */; };
+		D1F803671E3306D40056FA19 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570742661D5A63DB004B9C84 /* StoreKit.framework */; };
 		D306459E1611EC2A00BB571E /* UILoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D306459D1611EC2900BB571E /* UILoadingImageView.m */; };
 		D3128FE115AABC7E00A2147A /* ContactDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3128FDF15AABC7E00A2147A /* ContactDetailsView.m */; };
 		D31AAF5E159B3919002C6B02 /* CallPausedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D31AAF5D159B3919002C6B02 /* CallPausedTableView.m */; };
@@ -868,7 +867,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* LinphoneAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinphoneAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* LinphoneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinphoneAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* linphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = linphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* taqatcall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taqatcall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		220FAD2910765B400068D98F /* libgsm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgsm.a; path = "liblinphone-sdk/apple-darwin/lib/libgsm.a"; sourceTree = "<group>"; };
 		220FAD2C10765B400068D98F /* libortp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libortp.a; path = "liblinphone-sdk/apple-darwin/lib/libortp.a"; sourceTree = "<group>"; };
@@ -1771,7 +1770,7 @@
 		F0642EF019DAC891009DB336 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F0642EF719DAF32E009DB336 /* DTWeakSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWeakSupport.h; sourceTree = "<group>"; };
 		F088488C19FF8C41007FFCF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UIContactCell.xib; sourceTree = "<group>"; };
-		F08F118419C09C6A007D70C2 /* liblinphoneTesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = liblinphoneTesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08F118419C09C6A007D70C2 /* libtaqatcallTesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libtaqatcallTesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0938158188E629800A55DFA /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		F09548181883F15300E8A69B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChatConversationView.xib; sourceTree = "<group>"; };
 		F09548191883F15300E8A69B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChatsListView.xib; sourceTree = "<group>"; };
@@ -1820,13 +1819,13 @@
 		F0AF07111A24BA770086C9C1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AssistantViewScreens.strings; sourceTree = "<group>"; };
 		F0B026F21AA710AF00FF49F7 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		F0B89C2118DC89E30050B60E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		F0BB8BD51936208100974404 /* liblinphoneTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = liblinphoneTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0BB8BD51936208100974404 /* libtaqatcallTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = libtaqatcallTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BB8C0F193623F200974404 /* liblinphonetester.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblinphonetester.a; path = "liblinphone-sdk/apple-darwin/lib/liblinphonetester.a"; sourceTree = "<group>"; };
 		F0BB8C111936240300974404 /* libcunit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcunit.a; path = "liblinphone-sdk/apple-darwin/lib/libcunit.a"; sourceTree = "<group>"; };
 		F0BB8C311936246600974404 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		F0BB8C34193624C800974404 /* libresolv.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.9.dylib; path = usr/lib/libresolv.9.dylib; sourceTree = SDKROOT; };
 		F0BB8C4A193631B300974404 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		F0F952001A6AEB1000254160 /* linphoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = linphoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F952001A6AEB1000254160 /* taqatcallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taqatcallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FF66AA1ACAEEB0008A4486 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = ../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1835,8 +1834,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F803671E3306D40056FA19 /* StoreKit.framework in Frameworks */,
 				9EC6C1E31DF969AA006C2FD2 /* libturbojpeg.a in Frameworks */,
-				9EC6C1E11DF96991006C2FD2 /* armv7-apple-darwin.ios in Frameworks */,
 				8C2595DF1DEDCC8E007A6424 /* CallKit.framework in Frameworks */,
 				8C73477C1D9BA3A00022EE8C /* UserNotifications.framework in Frameworks */,
 				8CA2004C1D8158440095F859 /* PushKit.framework in Frameworks */,
@@ -1871,7 +1870,6 @@
 				63CFEE0A1B9EDD88007EA5BD /* libmssilk.a in Frameworks */,
 				63CFEE0B1B9EDD88007EA5BD /* libmswebrtc.a in Frameworks */,
 				63CFEE0C1B9EDD88007EA5BD /* libmsx264.a in Frameworks */,
-				570742671D5A63DB004B9C84 /* StoreKit.framework in Frameworks */,
 				63CFEDF61B9EDD74007EA5BD /* libopencore-amrnb.a in Frameworks */,
 				63CFEDF71B9EDD74007EA5BD /* libopencore-amrwb.a in Frameworks */,
 				63CFEDF81B9EDD74007EA5BD /* libopenh264.a in Frameworks */,
@@ -2114,10 +2112,10 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* linphone.app */,
-				F0BB8BD51936208100974404 /* liblinphoneTester.app */,
-				F08F118419C09C6A007D70C2 /* liblinphoneTesterTests.xctest */,
-				F0F952001A6AEB1000254160 /* linphoneTests.xctest */,
+				1D6058910D05DD3D006BFB54 /* taqatcall.app */,
+				F0BB8BD51936208100974404 /* libtaqatcallTester.app */,
+				F08F118419C09C6A007D70C2 /* libtaqatcallTesterTests.xctest */,
+				F0F952001A6AEB1000254160 /* taqatcallTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3093,9 +3091,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* linphone */ = {
+		1D6058900D05DD3D006BFB54 /* taqatcall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "linphone" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "taqatcall" */;
 			buildPhases = (
 				639002451D4106CA00BEFC78 /* ShellScript */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
@@ -3107,14 +3105,14 @@
 			);
 			dependencies = (
 			);
-			name = linphone;
+			name = taqatcall;
 			productName = linphone;
-			productReference = 1D6058910D05DD3D006BFB54 /* linphone.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* taqatcall.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F08F118319C09C6A007D70C2 /* liblinphoneTesterTests */ = {
+		F08F118319C09C6A007D70C2 /* libtaqatcallTesterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F08F119319C09C6B007D70C2 /* Build configuration list for PBXNativeTarget "liblinphoneTesterTests" */;
+			buildConfigurationList = F08F119319C09C6B007D70C2 /* Build configuration list for PBXNativeTarget "libtaqatcallTesterTests" */;
 			buildPhases = (
 				F08F118019C09C6A007D70C2 /* Sources */,
 				F08F118119C09C6A007D70C2 /* Frameworks */,
@@ -3125,14 +3123,14 @@
 			dependencies = (
 				F08F119219C09C6B007D70C2 /* PBXTargetDependency */,
 			);
-			name = liblinphoneTesterTests;
+			name = libtaqatcallTesterTests;
 			productName = LinphoneTesterTests;
-			productReference = F08F118419C09C6A007D70C2 /* liblinphoneTesterTests.xctest */;
+			productReference = F08F118419C09C6A007D70C2 /* libtaqatcallTesterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F0BB8BD41936208100974404 /* liblinphoneTester */ = {
+		F0BB8BD41936208100974404 /* libtaqatcallTester */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F0BB8C051936208200974404 /* Build configuration list for PBXNativeTarget "liblinphoneTester" */;
+			buildConfigurationList = F0BB8C051936208200974404 /* Build configuration list for PBXNativeTarget "libtaqatcallTester" */;
 			buildPhases = (
 				F0BB8BD11936208100974404 /* Sources */,
 				F0BB8BD21936208100974404 /* Frameworks */,
@@ -3142,14 +3140,14 @@
 			);
 			dependencies = (
 			);
-			name = liblinphoneTester;
+			name = libtaqatcallTester;
 			productName = LinphoneTester;
-			productReference = F0BB8BD51936208100974404 /* liblinphoneTester.app */;
+			productReference = F0BB8BD51936208100974404 /* libtaqatcallTester.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F0F951FF1A6AEB1000254160 /* linphoneTests */ = {
+		F0F951FF1A6AEB1000254160 /* taqatcallTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F0F9520C1A6AEB1100254160 /* Build configuration list for PBXNativeTarget "linphoneTests" */;
+			buildConfigurationList = F0F9520C1A6AEB1100254160 /* Build configuration list for PBXNativeTarget "taqatcallTests" */;
 			buildPhases = (
 				F0F951FC1A6AEB1000254160 /* Sources */,
 				F0F951FD1A6AEB1000254160 /* Frameworks */,
@@ -3161,9 +3159,9 @@
 				63058A4E1B4E832500EFAE36 /* PBXTargetDependency */,
 				F0F952071A6AEB1000254160 /* PBXTargetDependency */,
 			);
-			name = linphoneTests;
+			name = taqatcallTests;
 			productName = KifTests;
-			productReference = F0F952001A6AEB1000254160 /* linphoneTests.xctest */;
+			productReference = F0F952001A6AEB1000254160 /* taqatcallTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -3175,7 +3173,8 @@
 				LastUpgradeCheck = 0820;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = Z2V957B3D6;
+						DevelopmentTeam = U577RNXPN3;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 1;
@@ -3199,7 +3198,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "linphone" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "taqatcall" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -3232,10 +3231,10 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* linphone */,
-				F0F951FF1A6AEB1000254160 /* linphoneTests */,
-				F0BB8BD41936208100974404 /* liblinphoneTester */,
-				F08F118319C09C6A007D70C2 /* liblinphoneTesterTests */,
+				1D6058900D05DD3D006BFB54 /* taqatcall */,
+				F0F951FF1A6AEB1000254160 /* taqatcallTests */,
+				F0BB8BD41936208100974404 /* libtaqatcallTester */,
+				F08F118319C09C6A007D70C2 /* libtaqatcallTesterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -4045,12 +4044,12 @@
 		};
 		F08F119219C09C6B007D70C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F0BB8BD41936208100974404 /* liblinphoneTester */;
+			target = F0BB8BD41936208100974404 /* libtaqatcallTester */;
 			targetProxy = F08F119119C09C6B007D70C2 /* PBXContainerItemProxy */;
 		};
 		F0F952071A6AEB1000254160 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1D6058900D05DD3D006BFB54 /* linphone */;
+			target = 1D6058900D05DD3D006BFB54 /* taqatcall */;
 			targetProxy = F0F952061A6AEB1000254160 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -4526,13 +4525,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = Z2V957B3D6;
+				DEVELOPMENT_TEAM = U577RNXPN3;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = linphone_Prefix.pch;
+				GCC_PREFIX_HEADER = taqatcall_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -4543,7 +4542,7 @@
 					"$(SRCROOT)/Classes/Utils/NinePatch/",
 					"$(SRCROOT)/Classes/Utils/XMLRPC/",
 				);
-				INFOPLIST_FILE = "linphone-Info.plist";
+				INFOPLIST_FILE = "taqatcall-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
 					"$(SRCROOT)/liblinphone-sdk/apple-darwin/lib",
@@ -4554,11 +4553,12 @@
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ORDER_FILE = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = org.linphone.phone;
-				PRODUCT_NAME = linphone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taqat.call;
+				PRODUCT_NAME = taqatcall;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 x86_64";
 				WARNING_CFLAGS = (
 					"-Werror=objc-method-access",
 					"-Werror=incomplete-implementation",
@@ -4618,13 +4618,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = Z2V957B3D6;
+				DEVELOPMENT_TEAM = U577RNXPN3;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = linphone_Prefix.pch;
+				GCC_PREFIX_HEADER = taqatcall_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -4634,7 +4634,7 @@
 					"$(SRCROOT)/Classes/Utils/NinePatch/",
 					"$(SRCROOT)/Classes/Utils/XMLRPC/",
 				);
-				INFOPLIST_FILE = "linphone-Info.plist";
+				INFOPLIST_FILE = "taqatcall-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
 					"$(SRCROOT)/liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins",
@@ -4645,11 +4645,12 @@
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ORDER_FILE = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = org.linphone.phone;
-				PRODUCT_NAME = linphone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taqat.call;
+				PRODUCT_NAME = taqatcall;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 x86_64";
 				WARNING_CFLAGS = (
 					"-Werror=objc-method-access",
 					"-Werror=incomplete-implementation",
@@ -4709,13 +4710,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = Z2V957B3D6;
+				DEVELOPMENT_TEAM = U577RNXPN3;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = linphone_Prefix.pch;
+				GCC_PREFIX_HEADER = taqatcall_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -4725,7 +4726,7 @@
 					"$(SRCROOT)/Classes/Utils/NinePatch/",
 					"$(SRCROOT)/Classes/Utils/XMLRPC/",
 				);
-				INFOPLIST_FILE = "linphone-Info.plist";
+				INFOPLIST_FILE = "taqatcall-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
 					"$(SRCROOT)/liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins",
@@ -4736,11 +4737,12 @@
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ORDER_FILE = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = org.linphone.phone;
-				PRODUCT_NAME = linphone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taqat.call;
+				PRODUCT_NAME = taqatcall;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 x86_64";
 				WARNING_CFLAGS = (
 					"-Werror=objc-method-access",
 					"-Werror=incomplete-implementation",
@@ -4800,13 +4802,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = Z2V957B3D6;
+				DEVELOPMENT_TEAM = U577RNXPN3;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = linphone_Prefix.pch;
+				GCC_PREFIX_HEADER = taqatcall_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -4816,7 +4818,7 @@
 					"$(SRCROOT)/Classes/Utils/NinePatch/",
 					"$(SRCROOT)/Classes/Utils/XMLRPC/",
 				);
-				INFOPLIST_FILE = "linphone-Info.plist";
+				INFOPLIST_FILE = "taqatcall-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
 					"$(SRCROOT)/liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins",
@@ -4827,11 +4829,12 @@
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ORDER_FILE = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = org.linphone.phone;
-				PRODUCT_NAME = linphone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taqat.call;
+				PRODUCT_NAME = taqatcall;
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 x86_64";
 				WARNING_CFLAGS = (
 					"-Werror=objc-method-access",
 					"-Werror=incomplete-implementation",
@@ -4926,7 +4929,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/liblinphoneTester.app/liblinphoneTester";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libtaqatcallTester.app/libtaqatcallTester";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -4970,7 +4973,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/liblinphoneTester.app/liblinphoneTester";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libtaqatcallTester.app/libtaqatcallTester";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -5015,7 +5018,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/liblinphoneTester.app/liblinphoneTester";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libtaqatcallTester.app/libtaqatcallTester";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -5060,7 +5063,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/liblinphoneTester.app/liblinphoneTester";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libtaqatcallTester.app/libtaqatcallTester";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -5323,7 +5326,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/linphone.app/linphone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/taqatcall.app/taqatcall";
 			};
 			name = Debug;
 		};
@@ -5367,7 +5370,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/linphone.app/linphone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/taqatcall.app/taqatcall";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -5412,7 +5415,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/linphone.app/linphone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/taqatcall.app/taqatcall";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Distribution;
@@ -5457,7 +5460,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/linphone.app/linphone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/taqatcall.app/taqatcall";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = DistributionAdhoc;
@@ -5465,7 +5468,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "linphone" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "taqatcall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -5476,7 +5479,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "linphone" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "taqatcall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
@@ -5487,7 +5490,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F08F119319C09C6B007D70C2 /* Build configuration list for PBXNativeTarget "liblinphoneTesterTests" */ = {
+		F08F119319C09C6B007D70C2 /* Build configuration list for PBXNativeTarget "libtaqatcallTesterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F08F119419C09C6B007D70C2 /* Debug */,
@@ -5498,7 +5501,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F0BB8C051936208200974404 /* Build configuration list for PBXNativeTarget "liblinphoneTester" */ = {
+		F0BB8C051936208200974404 /* Build configuration list for PBXNativeTarget "libtaqatcallTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F0BB8C061936208200974404 /* Debug */,
@@ -5509,7 +5512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F0F9520C1A6AEB1100254160 /* Build configuration list for PBXNativeTarget "linphoneTests" */ = {
+		F0F9520C1A6AEB1100254160 /* Build configuration list for PBXNativeTarget "taqatcallTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F0F952081A6AEB1000254160 /* Debug */,

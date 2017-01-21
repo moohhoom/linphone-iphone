@@ -57,6 +57,12 @@ static UICompositeViewDescription *compositeDescription = nil;
 											   name:kLinphoneBluetoothAvailabilityUpdate
 											 object:nil];
 
+    // Set observers
+    [NSNotificationCenter.defaultCenter addObserver:self
+                                           selector:@selector(callUpdate:)
+                                               name:kLinphoneCallUpdate
+                                             object:nil];
+    
 	LinphoneCall *call = linphone_core_get_current_call(LC);
 	if (!call) {
 		return;
@@ -65,7 +71,7 @@ static UICompositeViewDescription *compositeDescription = nil;
 	const LinphoneAddress *addr = linphone_call_get_remote_address(call);
 	[ContactDisplay setDisplayNameLabel:_nameLabel forAddress:addr];
 	char *uri = linphone_address_as_string_uri_only(addr);
-	_addressLabel.text = [NSString stringWithUTF8String:uri];
+	_addressLabel.text =@"Calling ..."; //[NSString stringWithUTF8String:uri];
 	ms_free(uri);
 	[_avatarImage setImage:[FastAddressBook imageForAddress:addr thumbnail:NO] bordered:YES withRoundedRadius:YES];
 
@@ -87,6 +93,41 @@ static UICompositeViewDescription *compositeDescription = nil;
 	}
 }
 
+
+- (void)callUpdate:(NSNotification *)notif {
+    //LinphoneCall *call = [[notif.userInfo objectForKey:@"call"] pointerValue];
+    LinphoneCallState state = [[notif.userInfo objectForKey:@"state"] intValue];
+    //NSString *message = [notif.userInfo objectForKey:@"message"];
+    
+    switch (state) {
+            
+        case LinphoneCallOutgoingRinging: {
+            [_addressLabel setText:@"Ringing..."];
+        }
+        case LinphoneCallUpdatedByRemote:
+        case LinphoneCallEnd:
+        case LinphoneCallError:
+        case  LinphoneCallOutgoingInit:
+        case LinphoneCallIncomingReceived:
+        case LinphoneCallIncomingEarlyMedia:
+        case LinphoneCallPausedByRemote:
+        case LinphoneCallConnected:
+        case LinphoneCallStreamsRunning:
+        case LinphoneCallEarlyUpdatedByRemote:
+        case LinphoneCallEarlyUpdating:
+        case LinphoneCallIdle:
+        case LinphoneCallOutgoingEarlyMedia:
+        case LinphoneCallOutgoingProgress:
+        case LinphoneCallPaused:
+        case LinphoneCallPausing:
+        case LinphoneCallRefered:
+        case LinphoneCallReleased:
+        case LinphoneCallResuming:
+        case LinphoneCallUpdating:
+            break;
+            
+    }
+}
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 	[NSNotificationCenter.defaultCenter removeObserver:self];

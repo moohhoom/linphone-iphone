@@ -31,7 +31,7 @@ Linphone for iPhone depends on liblinphone SDK. This SDK is generated from makef
  2. Install Linphone dependencies: open iTerm.app in the current directory and list dependencies to install using:
  `./prepare.py`
  3. Reorder your path so that brew tools are used instead of Apple's ones which are obsolete:
- `export PATH=/usr/local/bin:$PATH`
+ `	`
  4. Build SDK (see below for options and explanations):
  `./prepare.py -c && ./prepare.py && make`
 

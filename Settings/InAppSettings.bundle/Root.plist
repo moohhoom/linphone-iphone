@@ -147,6 +147,8 @@
 		<dict>
 			<key>File</key>
 			<string>Advanced</string>
+			<key>Key</key>
+			<string>advanced_menu</string>
 			<key>Title</key>
 			<string>Advanced</string>
 			<key>Type</key>

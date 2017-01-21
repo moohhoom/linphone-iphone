@@ -47,15 +47,15 @@
 												[PhoneMainView.instance
 													changeCurrentView:AssistantView.compositeViewDescription];
 											  }]];
-	BOOL mustLink = ([LinphoneManager.instance lpConfigIntForKey:@"must_link_account_time"] > 0);
-	if (mustLink) {
-		[_sideMenuEntries
-			addObject:[[SideMenuEntry alloc] initWithTitle:NSLocalizedString(@"Link my account", nil)
-												  tapBlock:^() {
-													[PhoneMainView.instance
-														changeCurrentView:AssistantLinkView.compositeViewDescription];
-												  }]];
-	}
+//	BOOL mustLink = ([LinphoneManager.instance lpConfigIntForKey:@"must_link_account_time"] > 0);
+//	if (mustLink) {
+//		[_sideMenuEntries
+//			addObject:[[SideMenuEntry alloc] initWithTitle:NSLocalizedString(@"Link my account", nil)
+//												  tapBlock:^() {
+//													[PhoneMainView.instance
+//														changeCurrentView:AssistantLinkView.compositeViewDescription];
+//												  }]];
+//	}
 
 	[_sideMenuEntries
 		addObject:[[SideMenuEntry alloc] initWithTitle:NSLocalizedString(@"Settings", nil)
@@ -63,15 +63,15 @@
 												[PhoneMainView.instance
 													changeCurrentView:SettingsView.compositeViewDescription];
 											  }]];
-	InAppProductsManager *iapm = LinphoneManager.instance.iapManager;
-	if (iapm.enabled){
-		[_sideMenuEntries
-			addObject:[[SideMenuEntry alloc] initWithTitle:NSLocalizedString(@"Shop", nil)
-												  tapBlock:^() {
-													[PhoneMainView.instance
-														changeCurrentView:ShopView.compositeViewDescription];
-												  }]];
-	}
+//	InAppProductsManager *iapm = LinphoneManager.instance.iapManager;
+//	if (iapm.enabled){
+//		[_sideMenuEntries
+//			addObject:[[SideMenuEntry alloc] initWithTitle:NSLocalizedString(@"Shop", nil)
+//												  tapBlock:^() {
+//													[PhoneMainView.instance
+//														changeCurrentView:ShopView.compositeViewDescription];
+//												  }]];
+	//}
 	[_sideMenuEntries addObject:[[SideMenuEntry alloc] initWithTitle:NSLocalizedString(@"About", nil)
 															tapBlock:^() {
 															  [PhoneMainView.instance
