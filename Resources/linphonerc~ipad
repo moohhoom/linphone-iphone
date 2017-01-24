@@ -10,7 +10,7 @@ turn_preference=1
 preview_preference=1
 random_port_preference=1
 start_at_boot_preference=1
-stun_preference=stun.linphone.org
+stun_preference=
 voiceproc_preference=1
 repeat_call_notification=1
 
@@ -18,7 +18,7 @@ repeat_call_notification=1
 reg_expires=1314000
 
 [misc]
-file_transfer_server_url=https://www.linphone.org:444/lft.php
+file_transfer_server_url=
 max_calls=3
 
 [net]
@@ -27,7 +27,7 @@ edge_bw=10
 edge_ping_time=10
 firewall_policy=ice
 mtu=1300
-stun_server=stun.linphone.org
+stun_server=
 upload_bw=512
 
 [rtp]
@@ -39,7 +39,7 @@ video_rtp_port=9200-9299
 
 [sip]
 auto_net_state_mon=0
-contact="Linphone iPhone" <sip:linphone.iphone@unknown-host>
+contact="Taqat iPhone" <sip:Taqat.iphone@unknown-host>
 guess_hostname=1
 inc_timeout=45
 keepalive_period=30000

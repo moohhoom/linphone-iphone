@@ -5,22 +5,22 @@
 		<entry name="avpf" overwrite="true">1</entry>
 		<entry name="dial_escape_plus" overwrite="true">0</entry>
 		<entry name="publish" overwrite="true">0</entry>
-		<entry name="quality_reporting_collector" overwrite="true">sip:voip-metrics@sip.linphone.org;transport=tls</entry>
+		<entry name="quality_reporting_collector" overwrite="true">sip:voip-metrics@localhost111;transport=tls</entry>
 		<entry name="quality_reporting_enabled" overwrite="true">1</entry>
 		<entry name="quality_reporting_interval" overwrite="true">180</entry>
 		<entry name="reg_expires" overwrite="true">31536000</entry>
-		<entry name="reg_identity" overwrite="true">sip:?@sip.linphone.org</entry>
+		<entry name="reg_identity" overwrite="true">sip:?@localhost111</entry>
 		<entry name="reg_sendregister" overwrite="true">1</entry>
 		<entry name="refkey" overwrite="true">push_notification</entry>
-		<entry name="realm" overwrite="true">sip.linphone.org</entry>
+		<entry name="realm" overwrite="true">localhost111</entry>
 	</section>
 
 	<section name="sip">
-		<entry name="rls_uri" overwrite="true">sips:rls@sip.linphone.org</entry>
+		<entry name="rls_uri" overwrite="true">sips:rls@localhost111</entry>
 	</section>
 
 	<section name="assistant">
-		<entry name="domain" overwrite="true">sip.linphone.org</entry>
+		<entry name="domain" overwrite="true">localhost111</entry>
 		<entry name="password_max_length" overwrite="true">-1</entry>
 		<entry name="password_min_length" overwrite="true">1</entry>
 		<entry name="username_length" overwrite="true">-1</entry>

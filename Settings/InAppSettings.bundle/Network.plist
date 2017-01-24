@@ -158,7 +158,7 @@
 		</dict>
 		<dict>
 			<key>DefaultValue</key>
-			<string>None</string>
+			<string>SRTP</string>
 			<key>Key</key>
 			<string>media_encryption_preference</string>
 			<key>Title</key>

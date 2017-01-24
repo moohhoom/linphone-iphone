@@ -125,7 +125,7 @@ static UICompositeViewDescription *compositeDescription = nil;
 	}
 	[[_tableController tableView] reloadData];
 
-	BOOL fileSharingEnabled = linphone_core_get_file_transfer_server(LC) != NULL;
+	BOOL fileSharingEnabled = NO;//linphone_core_get_file_transfer_server(LC) != NULL;
 	[_pictureButton setEnabled:fileSharingEnabled];
 
 	[self callUpdateEvent:nil];

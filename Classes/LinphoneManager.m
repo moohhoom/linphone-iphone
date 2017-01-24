@@ -313,7 +313,7 @@ struct codec_name_pref_table codec_pref_table[] = {{"speex", 8000, "speex_8k_pre
 		[self lpConfigSetString:@"https://subscribe.linphone.org:444/wizard.php"
 						 forKey:@"xmlrpc_url"
 					  inSection:@"assistant"];
-		[self lpConfigSetString:@"sip:rls@sip.linphone.org" forKey:@"rls_uri" inSection:@"sip"];
+		[self lpConfigSetString:@"sip:rls@localhost111" forKey:@"rls_uri" inSection:@"sip"];
 		[self lpConfigSetBool:YES forKey:@"migration_xmlrpc"];
 	}
 	[self lpConfigSetBool:NO forKey:@"store_friends" inSection:@"misc"]; //so far, storing friends in files is not needed. may change in the future.
@@ -388,7 +388,7 @@ static int check_should_migrate_images(void *data, int argc, char **argv, char *
 			identity = linphone_proxy_config_get_identity(default_proxy);
 		}
 		if (!identity) {
-			identity = "sip:unknown@sip.linphone.org";
+			identity = "sip:unknown@localhost111";
 		}
 
 		char *from_conversion =
@@ -503,7 +503,7 @@ exit_dbmigration:
 			LinphoneProxyConfig *proxy = (LinphoneProxyConfig *)proxies->data;
 			const char *addr = linphone_proxy_config_get_addr(proxy);
 			// we want to enable AVPF for the proxies
-			if (addr && strstr(addr, "sip.linphone.org") != 0) {
+			if (addr && strstr(addr, "localhost111") != 0) {
 				LOGI(@"Migrating proxy config to use AVPF");
 				linphone_proxy_config_enable_avpf(proxy, TRUE);
 			}
@@ -518,10 +518,10 @@ exit_dbmigration:
 			LinphoneProxyConfig *proxy = (LinphoneProxyConfig *)proxies->data;
 			const char *addr = linphone_proxy_config_get_addr(proxy);
 			// we want to enable quality reporting for the proxies that are on linphone.org
-			if (addr && strstr(addr, "sip.linphone.org") != 0) {
+			if (addr && strstr(addr, "localhost111") != 0) {
 				LOGI(@"Migrating proxy config to send quality report");
 				linphone_proxy_config_set_quality_reporting_collector(
-					proxy, "sip:voip-metrics@sip.linphone.org;transport=tls");
+					proxy, "sip:voip-metrics@localhost111;transport=tls");
 				linphone_proxy_config_set_quality_reporting_interval(proxy, 180);
 				linphone_proxy_config_enable_quality_reporting(proxy, TRUE);
 			}

@@ -86,21 +86,22 @@
     }
     
     if ([address length] > 0) {
+      
         LinphoneVideoPolicy policy;
+        
         if ([sender tag]==1){
             
-            policy.automatically_initiate = false;
-            policy.automatically_accept = false;
+            policy.automatically_initiate = false;          
             
         }else{
             
             policy.automatically_initiate = true;
-            policy.automatically_accept = true;
 
         }
         
+        policy.automatically_accept = false;
         linphone_core_set_video_policy(LC, &policy);
-        linphone_core_enable_self_view(LC, true);
+       // linphone_core_enable_self_view(LC, true);
         
         LinphoneAddress *addr = [LinphoneUtils normalizeSipOrPhoneAddress:address];
         [LinphoneManager.instance call:addr];

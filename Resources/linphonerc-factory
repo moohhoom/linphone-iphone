@@ -12,7 +12,7 @@ hide_assistant_create_account=1
 #contact_display_username_only=1
 #contact_filter_on_default_domain=1
 #debug_popup_magic=**00**
-debug_popup_email=linphone-iphone@belledonne-communications.com
+debug_popup_email=ahmad@tasqat.com
 send_logs_include_linphonerc_and_chathistory=0
 #use_phone_number=0
 publish_presence=0
@@ -25,6 +25,8 @@ username_length=-1
 sip_random_port=0
 #whether SIP passwords must be encrypted in configuration storage file
 store_ha1_passwd=0
+verify_server_certs=0
+verify_server_cn=0
 
 [misc]
 #by default it is set to 30 by liblinphone

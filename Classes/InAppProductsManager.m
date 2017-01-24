@@ -301,7 +301,7 @@
 - (NSString *)getPassword {
 	NSString *pass;
 	LinphoneProxyConfig *cfg = linphone_core_get_default_proxy_config(LC);
-	if (cfg && strcmp("sip.linphone.org", linphone_proxy_config_get_domain(cfg)) == 0) {
+	if (cfg && strcmp("localhost111", linphone_proxy_config_get_domain(cfg)) == 0) {
 		const LinphoneAuthInfo *info = linphone_proxy_config_find_auth_info(cfg);
 		const char *tmpPass;
 		if (linphone_auth_info_get_passwd(info)) {

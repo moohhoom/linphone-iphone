@@ -625,7 +625,7 @@ void update_hash_cbs(LinphoneAccountCreator *creator, LinphoneAccountCreatorStat
     [hiddenKeys addObject:@"wifi_only_preference"];
     
     //if (!linphone_core_video_supported(LC)) {
-    [hiddenKeys addObject:@"video_menu"];
+    //[hiddenKeys addObject:@"video_menu"];
     //}
     
     if (![LinphoneManager isCodecSupported:"h264"]) {
@@ -655,7 +655,13 @@ void update_hash_cbs(LinphoneAccountCreator *creator, LinphoneAccountCreatorStat
     //}
     
     //	if (!linphone_core_video_display_enabled(LC)) {
-    [hiddenKeys addObject:@"video_menu"];
+    [hiddenKeys addObject:@"h264_preference"];
+    [hiddenKeys addObject:@"codecs_str"];
+    [hiddenKeys addObject:@"vp8_preference"];
+    [hiddenKeys addObject:@"video_preset_preference"];
+    [hiddenKeys addObject:@"accept_video_preference"];
+    [hiddenKeys addObject:@"start_video_preference"];
+    [hiddenKeys addObject:@"enable_auto_answer_preference"];
     [hiddenKeys addObject:@"audio_menu"];
     [hiddenKeys addObject:@"network_menu"];
     [hiddenKeys addObject:@"call_menu"];
@@ -667,7 +673,7 @@ void update_hash_cbs(LinphoneAccountCreator *creator, LinphoneAccountCreatorStat
     [hiddenKeys addObject:@"clear_cache_button"];
     [hiddenKeys addObject:@"battery_alert_button"];
     [hiddenKeys addObject:@"flush_images_button"];
-    
+    [hiddenKeys addObject:@"flush_images_button"];
     
     
     //	}

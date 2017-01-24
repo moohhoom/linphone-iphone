@@ -137,6 +137,8 @@
 			<string>Codecs</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
+			<key>Key</key>
+			<string>codecs_str</string>
 		</dict>
 		<dict>
 			<key>DefaultValue</key>

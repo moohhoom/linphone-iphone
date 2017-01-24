@@ -53,7 +53,7 @@
 																assistant_activate_phone_number_link);
 
 	LinphoneProxyConfig *cfg = linphone_core_get_default_proxy_config(LC);
-	if (cfg && strcmp("sip.linphone.org", linphone_proxy_config_get_domain(cfg)) == 0) {
+	if (cfg && strcmp("localhost111", linphone_proxy_config_get_domain(cfg)) == 0) {
 		linphone_account_creator_set_username(
 			account_creator, linphone_address_get_username(linphone_proxy_config_get_identity_address(cfg)));
 		const LinphoneAuthInfo *info = linphone_proxy_config_find_auth_info(cfg);
@@ -65,7 +65,7 @@
 		}
 		linphone_account_creator_set_domain(account_creator, linphone_proxy_config_get_domain(cfg));
 	} else {
-		LOGW(@"Default proxy is NOT a sip.linphone.org, aborting");
+		LOGW(@"Default proxy is NOT a localhost111, aborting");
 		[PhoneMainView.instance popToView:DialerView.compositeViewDescription];
 	}
 
